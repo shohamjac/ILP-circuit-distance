@@ -1,5 +1,7 @@
 A tool to compute the exact minimum circuit-level distance of a QEC code given in stim circuit format using integer linear programming.
 
+A detailed explanation is given in this blog [post](https://shohamjac.github.io/posts/circuit-Level-distance/).
+
 example:
 ```python
 python BB_code_example.py
