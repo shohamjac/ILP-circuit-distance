@@ -1,4 +1,4 @@
-from mip import Model, BINARY, INTEGER, OptimizationStatus, xsum
+from mip import Model, BINARY, INTEGER, OptimizationStatus, xsum, INF
 import stim
 
 def mip_circuit_distance(dem: stim.DetectorErrorModel, time_limit: int = 300, *, verbose: bool = False, solver_name: str = None):
@@ -123,7 +123,7 @@ def mip_circuit_distance(dem: stim.DetectorErrorModel, time_limit: int = 300, *,
         m.max_mip_gap = 0  # exact optimality
         m.max_seconds = time_limit
 
-    m.optimize()
+    m.optimize() # if it is very long computation, consider adding max_nodes=INF due to bug in mip
 
     status = m.status
 
