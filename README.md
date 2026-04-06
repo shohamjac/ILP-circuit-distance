@@ -24,7 +24,7 @@ Solver: GRB
 
 In 2603.28627, they use a BB code with the parameters $[[248,10,\le18]]$.
 
-Using those scripts, we can easily check that 18 is indeed tight. Use:
+Using this tool, we can easily check that 18 is indeed tight. Use:
 ```bash
 python oratomic_BB.py --basis z --time-limit 10000
 ```
